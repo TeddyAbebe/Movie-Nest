@@ -2,6 +2,7 @@ import Link from "next/link";
 import MenuItem from "./MenuItem";
 import { AiFillHome } from "react-icons/ai";
 import { FaCircleInfo } from "react-icons/fa6";
+import DarkModeSwitch from "./DarkModeSwitch";
 
 export default function Header() {
   return (
@@ -11,14 +12,17 @@ export default function Header() {
         <MenuItem title="about" address="/about" Icon={FaCircleInfo} />
       </div>
 
-      <div className=" flex gap-1 items-center">
-        <Link
-          href={"/"}
-          className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg"
-        >
-          IMDB
-        </Link>
-        <span className="text-xl hidden sm:inline ">Clone</span>
+      <div className=" flex items-center gap-10">
+        <DarkModeSwitch />
+        <div className="flex gap-1 items-center">
+          <Link
+            href={"/"}
+            className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg"
+          >
+            IMDB
+          </Link>
+          <span className="text-xl hidden sm:inline ">Clone</span>
+        </div>
       </div>
     </div>
   );

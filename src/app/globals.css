@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sun div {
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transition: width 1s;
+}
+
+.sun .line1 {
+  width: 35px;
+  transform: translate(-50%, -50%);
+}
+.sun .line2 {
+  width: 35px;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.sun .line3 {
+  width: 35px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sun .line4 {
+  width: 35px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.sun::after {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background: #374151;
+  border-radius: 50%;
+  position: absolute;
+  top: -22px;
+  right: -22px;
+  transition: 0.5s;
+}
+
+#night::after {
+  top: -7px;
+  right: -7px;
+  background: #fff;
+}
+
+#night.sun div {
+  width: 0;
+}
