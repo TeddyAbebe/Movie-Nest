@@ -4,9 +4,8 @@ import { useState } from "react";
 
 export default function DarkModeSwitch() {
   const [isNightMode, setIsNightMode] = useState(false);
-  const { theme, setTheme, systemTheme } = useTheme();
+  const { setTheme } = useTheme();
 
-  //   const currentTheme = theme === "system" ? systemTheme : theme;
 
   const toggleNightMode = () => {
     setIsNightMode((prevMode) => !prevMode);
@@ -20,7 +19,7 @@ export default function DarkModeSwitch() {
 
   return (
     <div
-      className={`button-box w-10 h-10 rounded-md absolute top-3 right-60 flex items-center justify-center transform overflow-hidden `}
+      className={`button-box w-10 h-10 rounded-md absolute top-3 right-28 sm:right-60 flex items-center justify-center transform overflow-hidden `}
     >
       <div
         className={`sun group ${

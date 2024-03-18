@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className=" max-w-4xl mx-auto space-y-5">
+    <div className=" max-w-4xl mx-auto space-y-5 px-8">
       <h1 className="text-3xl font-mono font-medium text-amber-600">About</h1>
       <p className="text-lg">
         Welcome to <span className="font-bold font-serif">Movie Nest</span>,
@@ -25,7 +25,7 @@ export default function About() {
         around their shared love for movies.
       </p>
 
-      <div>
+      <div className="text-lg">
         Thanks for choosing{" "}
         <span className="font-bold text-xl font-serif text-amber-600">
           Movie Nest
